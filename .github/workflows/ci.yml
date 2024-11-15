@@ -1,0 +1,14 @@
+---
+name: CI
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Run end-to-end tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: vitallium/setup-wasi-sdk-action@b0f32f57a76b922f8dff520aeda30c9d26ea681e
+      - run: cargo build --release wasm32-wasip1
