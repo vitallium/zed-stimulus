@@ -7,8 +7,9 @@ on:
 
 jobs:
   build:
-    name: Run end-to-end tests
+    name: Build
     runs-on: ubuntu-latest
     steps:
-      - uses: vitallium/setup-wasi-sdk-action@b0f32f57a76b922f8dff520aeda30c9d26ea681e
-      - run: cargo build --release wasm32-wasip1
+      - uses: vitallium/setup-wasi-sdk-action@974e0ef073d1c60c6d6bd6ba13a91884598be2f9
+      - run: rustc -V
+      - run: cargo build --release --target wasm32-wasip1
