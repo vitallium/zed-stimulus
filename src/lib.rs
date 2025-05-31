@@ -90,3 +90,18 @@ impl zed::Extension for StimulusExtension {
 }
 
 zed::register_extension!(StimulusExtension);
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use zed_extension_api::Extension;
+
+    #[test]
+    fn test_new_extension_initial_state() {
+        let ext = StimulusExtension::new();
+        assert!(
+            !ext.did_find_server,
+            "A new extension instance should have did_find_server as false by default."
+        );
+    }
+}
