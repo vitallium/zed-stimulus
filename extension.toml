@@ -8,4 +8,4 @@ repository = "https://github.com/vitallium/zed-stimulus"
 
 [language_servers.stimulus]
 name = "Stimulus"
-languages = ["HTML", "HTML+ERB", "PHP"]
+languages = ["HTML", "HTML+ERB", "PHP", "JavaScript"]
