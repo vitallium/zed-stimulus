@@ -10,7 +10,7 @@ jobs:
     name: Release Zed Extension
     runs-on: ubuntu-latest
     steps:
-      - uses: huacnlee/zed-extension-action@v1
+      - uses: huacnlee/zed-extension-action@8cd592a0d24e1e41157740f1a529aeabddc88a1b # v2.0.0
         with:
           extension-name: stimulus
           push-to: vitallium/zed-extensions
